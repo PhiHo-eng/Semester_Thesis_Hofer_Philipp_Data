@@ -1,0 +1,54 @@
+% This file was created by tikzplotlib v0.9.8.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+
+\begin{axis}[
+/pgf/number format/.cd,
+use comma,
+1000 sep={},
+axis lines*=left,
+height=\figureheight,
+tick align=outside,
+tick pos=left,
+width=\figurewidth,
+x grid style={white!69.0196078431373!black},
+xlabel={Iterations},
+xmin=0, xmax=30,
+xtick style={color=black},
+y grid style={white!69.0196078431373!black},
+ylabel={Compliance \(\displaystyle C\)},
+ymin=897.35, ymax=6081.65,
+ytick style={color=black}
+]
+\addplot [semithick, color0]
+table {%
+0 5846
+1 3276
+2 2252
+3 1834
+4 1704
+5 1617
+6 1557
+7 1510
+8 1480
+9 1455
+10 1434
+11 1410
+12 1381
+13 1342
+14 1299
+15 1259
+16 1226
+17 1200
+18 1182
+19 1168
+20 1157
+21 1150
+22 1144
+24 1136
+25 1133
+};
+\end{axis}
+
+\end{tikzpicture}

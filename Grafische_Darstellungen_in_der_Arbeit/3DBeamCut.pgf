@@ -1,0 +1,63 @@
+  % Vector Styles
+
+\usetikzlibrary{patterns}
+
+\tikzset{
+  %load/.style   = {green, semithick,-latex},
+  %stressnorm/.style = {blue, semithick, -latex},
+  stressshear/.style = {red, semithick, -latex},
+  dim/.style    = {latex-latex},
+  axis/.style   = {-latex},
+}
+
+
+% Drawing View
+\tikzset{dimetric2/.style={
+ x={(0.866cm,-0.5cm)},
+ y={(0.866cm,0.5cm)},
+ z={(0cm,1cm)}}}
+%{
+%  x={(0.666cm,-0.333cm)},
+%  y={(0.333cm, 0.333cm)},
+%  z={(0.0cm, 1cm)},
+%}}
+  
+\begin{tikzpicture}[dimetric2]
+
+	% fixe Lagerung
+    \fill[pattern=north east lines] (0, -2, -5) -- (0, +1.5, -5) -- (0, +1.5, 1.5) -- (0, -2, 1.5) -- cycle; 
+	% Balken
+    \draw[fill=gray!35]   ( 0, -1.2, 0) -- (12, -1.2, 0) -- (12, -0.4, 0) -- ( 0, -0.4, 0) -- cycle;
+    \draw[fill=gray!30] (12, -0.4, -4) -- (12, -0.4, 0) -- (12 , -1.2, 0) -- ( 12, -1.2, -4) -- cycle;
+    \draw[fill=gray!25]   ( 0, -1.2, -4) -- (12, -1.2, -4) -- (12, -1.2, 0) -- ( 0, -1.2, 0) -- cycle;
+
+
+
+    %\draw[fill=yellow]  (4, -0.9 ,-0.6) -- (4, -0.9, -0.9)--( 4, -0.6, -0.9)-- (4, -0.6, -0.6) -- cycle node[above right] {{\textcolor{yellow}{$\mathrm{d}A$}}};     
+    %\node[violet] at (4, 1.2, 0.65) {$A$};
+    %\node[yellow] at (4.1, -0.75, 0.5) {$\mathrm{d}A$};
+
+
+   % \draw[stressnorm] (4, -0.75, -0.75) -- ++(1,0,0) node[right] {$F$};
+    \draw[stressshear] (12, -0.4, -4) -- ++(0, 0, -1) node[right] {$F$};
+ \draw[stressshear] (12, -0.6, -4) -- ++(0, 0, -1) ;
+ \draw[stressshear] (12, -0.8, -4) -- ++(0, 0, -1) ;
+ \draw[stressshear] (12, -1, -4) -- ++(0, 0, -1) ;
+ \draw[stressshear] (12, -1.2, -4) -- ++(0, 0, -1) ;
+    %\draw[dashed] (4, -1, -0.75) -- ++(0, -1,0);
+    %\draw (4,1.1, -0.0) -- ++(0,0.25,0);
+   % \draw (4, -1.75, -0.75) -- ++(0, -0.25, 0);
+   % \draw[axis] (4, -1.9, 0.0)  --++( 0,0, -0.75) node[below] {$z$};
+
+    %\foreach \z in {0, 0.25,..., 1.75} {
+    %  \draw (0, -1, \z-1) -- ++(0, -0.25, 0.25);
+    %}
+    %\foreach \y in {0, 0.25,..., 2} {
+    %  \draw (0, \y-1, 1) -- ++(0, -0.25, 0.25);
+    %}
+    
+    \coordinate (O) at (2,-3,-5.5);
+    \draw[axis] (O) -- ++(0,0,1.5) node[above] {$z$};    
+    \draw[axis] (O) -- ++(1.5,0,0) node[right] {$x$};
+    \draw[axis] (O) -- ++(0,1.5,0) node[above] {$y$};
+  \end{tikzpicture}

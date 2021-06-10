@@ -1,0 +1,68 @@
+% This file was created by tikzplotlib v0.9.8.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+
+\begin{axis}[
+/pgf/number format/.cd,
+use comma,
+1000 sep={},
+ xlabel style={yshift=-10},
+axis lines*=left,
+axis x line shift=10pt,
+axis y line shift=10pt,
+clip=false,
+enlargelimits=false,
+height=\figureheight,
+line cap=round,
+log basis y={10},
+scaled ticks=false,
+separate axis lines,
+tick align=outside,
+tick align=outside,
+tick pos=left,
+width=\figurewidth,
+x grid style={white!69.0196078431373!black},
+x tick label style={yshift=-8},
+xlabel shift=10pt,
+xlabel={Iterations},
+xmin=0, xmax=100,
+xtick style={color=black},
+y grid style={white!69.0196078431373!black},
+y tick label style={xshift=-32},
+ylabel shift= 20pt,
+ylabel shift=10pt,
+ylabel style={xshift=-40},
+ylabel style={yshift=20},
+ylabel={Compliance \(\displaystyle C\)},
+ymin=379.573024641766, ymax=2.6294861204691e+21,
+ymode=log,
+ytick style={color=black}
+]
+\addplot [semithick, color0]
+table {%
+0 714199.1875
+1 85729.96875
+2 25870.998046875
+3 13477.99609375
+4 9222.0009765625
+5 7364.99951171875
+6 6669.9990234375
+7 88679366656
+8 9.70999196893053e+17
+9 3.65999414126448e+20
+10 645445.75
+11 2727.00024414062
+12 2944.99951171875
+13 3099.99951171875
+14 3498.00073242188
+15 4028.99926757812
+16 4351.9990234375
+18 4698.99951171875
+25 4802.0009765625
+48 4638.0009765625
+99 4546.00048828125
+};
+\end{axis}
+
+\end{tikzpicture}

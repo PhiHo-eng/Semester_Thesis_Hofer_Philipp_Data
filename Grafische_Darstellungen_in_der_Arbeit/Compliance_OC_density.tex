@@ -1,0 +1,104 @@
+% This file was created by tikzplotlib v0.9.8.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+\definecolor{color1}{rgb}{1,0.498039215686275,0.0549019607843137}
+
+\begin{axis}[
+/pgf/number format/.cd,
+use comma,
+1000 sep={},
+ xlabel style={yshift=-10},
+axis lines*=left,
+axis x line shift=10pt,
+axis y line shift=10pt,
+clip=false,
+enlargelimits=false,
+height=\figureheight,
+legend cell align={left},
+legend style={fill opacity=0.8, draw opacity=1, text opacity=1, draw=white!80!black},
+line cap=round,
+scaled ticks=false,
+separate axis lines,
+tick align=outside,
+tick align=outside,
+tick pos=left,
+width=\figurewidth,
+x grid style={white!69.0196078431373!black},
+x tick label style={yshift=-8},
+xlabel shift=10pt,
+xlabel={Iterations},
+xmin=0, xmax=30,
+xtick style={color=black},
+y grid style={white!69.0196078431373!black},
+y tick label style={xshift=-27},
+ylabel shift= 20pt,
+ylabel shift=10pt,
+ylabel style={xshift=-40},
+ylabel style={yshift=15},
+ylabel={Compliance \(\displaystyle C\)},
+ymin=908.9, ymax=6081.1,
+ytick style={color=black}
+]
+\addplot [semithick, color0]
+table {%
+0 5846
+1 3276
+2 2252
+3 1834
+4 1704
+5 1617
+6 1557
+7 1510
+8 1480
+9 1455
+10 1434
+11 1410
+12 1381
+13 1342
+14 1299
+15 1259
+16 1226
+17 1200
+18 1182
+19 1168
+20 1157
+21 1150
+22 1144
+};
+\addlegendentry{Compliance $C$ wtihout density filter}
+\addplot [semithick, color1]
+table {%
+0 5846
+1 3268
+2 2256
+3 1861
+4 1750
+5 1681
+6 1629
+7 1593
+8 1569
+9 1549
+10 1535
+11 1522
+12 1512
+13 1500
+14 1491
+15 1475
+16 1457
+17 1437
+18 1410
+19 1382
+20 1352
+21 1323
+22 1300
+23 1284
+24 1271
+25 1262
+26 1254
+27 1251
+};
+\addlegendentry{Compliance $C$ wtih density filter}
+\end{axis}
+
+\end{tikzpicture}
