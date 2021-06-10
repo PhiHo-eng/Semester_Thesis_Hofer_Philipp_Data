@@ -1,0 +1,51 @@
+% This file was created by tikzplotlib v0.9.8.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+
+\begin{axis}[
+/pgf/number format/.cd,
+use comma,
+1000 sep={},
+ xlabel style={yshift=-10},
+axis lines*=left,
+axis x line shift=10pt,
+axis y line shift=10pt,
+clip=false,
+enlargelimits=false,
+height=\figureheight,
+line cap=round,
+scaled ticks=false,
+separate axis lines,
+tick align=outside,
+tick align=outside,
+tick pos=left,
+width=\figurewidth,
+x grid style={white!69.0196078431373!black},
+x tick label style={yshift=-8},
+xlabel shift=10pt,
+xlabel={Iterations},
+xmin=0, xmax=8,
+xtick style={color=black},
+y grid style={white!69.0196078431373!black},
+y tick label style={xshift=-27},
+ylabel shift= 20pt,
+ylabel shift=10pt,
+ylabel style={xshift=-40},
+ylabel style={yshift=15},
+ylabel={Volume fraction \(\displaystyle g_{comp}\)},
+ymin=0, ymax=1,
+ytick style={color=black}
+]
+\addplot [semithick, color0]
+table {%
+0 0.149999976158142
+1 0.307500004768372
+3 0.667500019073486
+4 0.845000028610229
+5 0.999000072479248
+6 1
+};
+\end{axis}
+
+\end{tikzpicture}
