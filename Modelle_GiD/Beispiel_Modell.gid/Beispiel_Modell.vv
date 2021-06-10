@@ -1,0 +1,33 @@
+BeginZE /home/philipp/Dokumente/Semesterarbeit/Beispiel_Modell.gid/Beispiel_Modell.vv
+   x -19.0973682403564453 60.565643310546875
+   y 44.3272209167480469 -20.0519962310791016
+   z -97.0977859497070312 93.0977859497070312
+   e 0.0331662483513355255
+   v -0.171027678920203569 0.245381805313534013 -0.0185715291423345641
+   r 0.954040041596554977
+   m 0.878885746002197266 -0.0484981946647167206 0.47456061840057373 0 -0.119370125234127045 0.940809249877929688 0.31722027063369751 0 -0.461855649948120117 -0.335448741912841797 0.821074604988098145 0 0 0 0 1
+   c 30.0140457153320312 9.99531841278076172 2
+   pd 0
+   pno 0
+   pfo 0
+   pf 4
+   pv 0
+   NowUse 1
+   DrawingType 0
+   LightVector 90 90 150 0
+   OGLShadow(UseShadows) 0
+   OGLShadow(RenderMode) RenderNice
+   OGLShadow(ShadowBias) -0.002
+   OGLShadow(AmbientShadows) 1
+   OGLShadow(UseFBO) 0
+   OGLShadow(FBOSize) 2048
+   OGLShadow(DimmedLightFactor) 0.02
+   OGLStereo(UseStereo) 0
+   OGLStereo(RelativeEyeDistance) 1
+   OGLStereo(FlipEyes) 0
+   OGLStereo(StereoMode) AnaglyphColors
+   OGLStereo(EyeDistance) 0.075
+   OGLStereo(LeftEyeDistance) 1 0 0 1
+   OGLStereo(RightEyeDistance) 0 1 1 1
+EndZE /home/philipp/Dokumente/Semesterarbeit/Beispiel_Modell.gid/Beispiel_Modell.vv
+
