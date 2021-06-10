@@ -1,0 +1,60 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Titelseite%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{\baselineskip}
+\TabPositions{4cm}
+\pagestyle{empty}
+
+\newgeometry{top=43.5mm, bottom=10mm, inner=20mm, outer=20mm, foot=0cm, head=0cm}
+\textblockorigin{20mm}{43.5mm} % Ursprung für Positionierung
+
+\begin{textblock*}{19mm}(0mm,-25.5mm)
+\includegraphics[height = 14mm, keepaspectratio=true]{Abbildungen/LLS_Logo_deu_engl.pdf}
+\end{textblock*}
+
+\begin{textblock*}{19mm}(145mm,-23.5mm)
+\includegraphics[height = 12mm, keepaspectratio=true]{Abbildungen/Universitaet_Logo_RGB.pdf}
+\end{textblock*}
+
+\begin{textblock*}{\textwidth}[0,0](0cm, 1cm)%
+{\fontsize{24pt}{26pt}\selectfont\textbf{Titel der Arbeit}}
+
+\vspace*{14pt}
+{\fontsize{14pt}{22pt}\selectfont\textbf{Bachelorarbeit}}
+\end{textblock*}
+    
+\vspace*{92.2mm}
+\fontsize{15pt}{17.5pt}\selectfont%
+Wissenschaftliche Arbeit zur Erlangung des Grades\\
+B.Sc. Maschinenbau an der Fakultät für Maschinenwesen \\
+der Technischen Universität München.
+
+\renewcommand{\baselinestretch}{1.47}
+\normalsize\selectfont
+\vspace*{17.1mm}
+\textbf{Betreut von}\tab
+\begin{minipage}[t]{\textwidth}
+Prof. Dr.-Ing. Mirko Hornung\\
+Max Meier, M.Sc.\\
+Lehrstuhl für Luftfahrtsysteme\strut
+\end{minipage}
+
+\vspace*{1.3mm}
+\textbf{Eingereicht von}\tab
+\begin{minipage}[t]{\textwidth}%-\CurrentLineWidth}
+Martin Mustermann\\
+Matrikelnummer: 12345678\strut
+\end{minipage}
+
+\vspace*{1.3mm}
+\textbf{Eingereicht am}\tab 
+\begin{minipage}[t]{\textwidth}%-\CurrentLineWidth}
+\today\strut
+\end{minipage}
+
+\vspace*{1.3mm}
+\textbf{Laufende Nummer}\tab 
+\begin{minipage}[t]{\textwidth}%-\CurrentLineWidth}
+LS-XX XX/XX
+\end{minipage}
+
+\restoregeometry

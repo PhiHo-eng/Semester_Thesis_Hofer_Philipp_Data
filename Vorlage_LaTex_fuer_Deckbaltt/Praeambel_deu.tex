@@ -1,0 +1,149 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Präambel%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%% 
+%      Pakete       %
+%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8]{inputenc} % Textcodierung UTF-8
+\usepackage[ngerman]{babel} % Deutsche Lokalisierung
+\usepackage[T1]{fontenc} % Zeichensatzkodierung
+\usepackage[scaled]{helvet} % Helvetica Schriftart
+\usepackage{nicefrac} % Darstellung von Brüchen in Formeln
+\usepackage{alphalph} % Option mit Buchstaben anstatt mit Zahlen zu zählen (z.B. für Seitenzahlen)
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{amsmath} % Darstellung von Formeln
+\usepackage{amsthm} % Darstellung von Mathematischen Theoremen
+\usepackage{threeparttable} % Einbindung von Tabellen mit Fußnoten
+\usepackage{caption} % Customise Bildunter- und Tabellenüberschriften
+\usepackage{tocloft} % Formatierung von Inhaltsverzeichnis, Abbildungs- und Tabellenverzeichnis
+\usepackage{booktabs} % Customise Tabellen mit Extra-Kommandos
+\usepackage{enumitem} % Formatierung von Listen (itemize, enumerate and description)
+\usepackage{geometry} % Einstellung der Seitengeometrie
+\usepackage{siunitx} % SI-Einheiten Paket
+\usepackage{color} % Für Matlab Code
+\usepackage{colortbl} % Benutzung von Farben in Tabellen
+\usepackage{setspace} % Zeilenabstand
+\usepackage{multirow} % Tabellen Paket
+\usepackage{chngcntr} % Nummerierungen
+\usepackage{natbib} % Bibliographie Paket
+\usepackage{graphicx} % Zur Einbindung von Abbildungen
+\usepackage{epstopdf} % Möglichkeit auch .eps Dateien einzubinden
+\usepackage[hyphens]{url} % URL-Paket mit Option zur Zeilentrennung nach Gedanken-/Bindestrichen
+\usepackage{hyperref} % Zur Erzeugung von hyperlinks im Dokument
+\usepackage[raggedleft]{titlesec} % Formatierung von Kapitel-Überschriften
+\usepackage[toc,page]{appendix} % Customise den Anhang
+\usepackage{listings} % Einbinden von Listen
+\usepackage{nomencl} % Nomenklatur 
+\usepackage{ifthen} % Für Bedingungen
+\usepackage{fancyhdr} % Header & Footer Package
+\usepackage[boxed,chapter]{algorithm} % Einbindung von Algorithmen als Pseudo-Code (schwarze Box um den Pseudo-Code und Nummerierung mit Einbeziehung der Kapitel Nummer
+\usepackage{algpseudocode}% http://ctan.org/pkg/algorithmicx
+\usepackage{tabto} % Tabulatoren
+\usepackage{parskip} % Kontrolle der Absatzgröße
+\usepackage[absolute]{textpos} % Positionierung
+
+%%%%%%%%%%%%%%%%%%%%% 
+%   Einstellungen   %
+%%%%%%%%%%%%%%%%%%%%%
+\geometry{a4paper, top=30mm, bottom=35mm, inner=35mm, outer=25mm, headsep=11mm, footskip=21mm} % Seitenformatierung
+
+\renewcommand*\familydefault{\sfdefault} % Schriftart-Einstellung: Sans serif
+\DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf} % define command \bf  (used by bibliography I think)
+\linespread{1.5}\selectfont % Zeilenabstand
+\sloppy % Silbentrennungeinstellung: möglichst selten trennen
+
+%Einstellungen für Seitenumbrüche  
+\interfootnotelinepenalty=9999 % Kein Seitenumbruch innerhalb einer Fußnote!
+\clubpenalty0
+\widowpenalty0
+\displaywidowpenalty0
+
+% Kapitel und Unterkapitel Formatierung
+\titleformat{\chapter}{\Large\bfseries}{\Large\bfseries\thechapter}{6pt}{\Large}
+\titleformat{\section}{\large\bfseries}{\large\bfseries\thesection}{6pt}{\large}
+\titleformat{\subsection}{\normalsize\bfseries}{\normalsize\bfseries\thesubsection}{6pt}{\normalsize}
+\titlespacing*{\chapter}{0pt}{-35pt}{0pt} % Vertikale Abstände
+\titlespacing*{name=\chapter,numberless}{0pt}{-35pt}{0pt}
+\titlespacing*{\section}{0pt}{0pt}{0pt}
+\titlespacing*{\subsection}{0pt}{0pt}{0pt}
+
+% Abbildungs-/Tabelleneinstellungen
+\captionsetup{labelfont={bf}} % Abbildung/Tabelle fett drucken
+
+% SI-Einheit Einstellungen
+\sisetup{per-mode = symbol}%
+\sisetup{detect-weight = true}
+
+% Definition von Befehlen, um Unterkapitel des Anhangs nicht ins Inhaltsverzeichnis aufzunehmen
+\newcommand{\stoptocwriting}{\addtocontents{toc}{\protect\setcounter{tocdepth}{-5}}} % Stopt die Aufnahme von Kapitelnamen ins Inhaltsverzeichnis
+\newcommand{\resumetocwriting}{\addtocontents{toc}{\protect\setcounter{tocdepth}{\arabic{tocdepth}}}} % Nimmt die Aufnahme von Kapitelnamen ins Inhaltsverzeichnis wieder auf
+  
+% Einbindung von Matlab-Code mit den Matlab-Farben
+\definecolor{mlgreen}{rgb}{.035,.6,.251}
+\definecolor{mlviolett}{rgb}{.643,.259,.804}
+\lstdefinestyle{mlab}{language=Matlab, 
+otherkeywords={},
+deletekeywords={def,real,length,gamma,zeros,figure,subplot,plot,xlabel,ylabel,zlabel,sin,pi,diff,size,meshgrid,legend,surf,min,trapz,cos,eig,exp,abc},
+numbers=left,
+numberstyle=\tiny,%5
+basicstyle={\ttfamily},%
+keywordstyle={\color{blue}},%
+commentstyle=\color{mlgreen},%
+stringstyle=\color{mlviolett},%
+breaklines=true,%
+showstringspaces=false,%
+numberbychapter=true, %
+xleftmargin=15pt
+ }
+
+% Einstellungen für das Symbolverzeichnis
+\newlength{\nomgroupstartsep}
+\setlength{\nomgroupstartsep}{16pt}
+
+\newlength{\nomintermsep}
+\setlength{\nomintermsep}{-\parsep}
+
+
+\renewcommand{\nomgroup}[1]{%
+	\ifthenelse{\equal{#1}{A}}{\item[\textbf{Abkürzungen}]}{%
+	\ifthenelse{\equal{#1}{I}}{\vspace{16pt} \item[\textbf{Indizes und Akzente}]}{%
+	\ifthenelse{\equal{#1}{G}}{\vspace{16pt} \item[\textbf{Griechische Symbole}]}{%
+	\ifthenelse{\equal{#1}{L}}{\vspace{16pt} \item[\textbf{Lateinische Symbole}]}}}}
+
+}
+\setlength{\nomlabelwidth}{.2\hsize} % Abstand zwischen Variable und Erklärung
+\setlength{\nomitemsep}{-\parsep} % Zeilenabstand verkleinern
+\renewcommand{\nomlabel}[1]{#1 \dotfill} % Punkte zw. Abkürzung und Erklärung
+\newcommand{\nomunit}[1]{\renewcommand{\nomentryend}{\dotfill #1}}
+\makenomenclature % Erstellen des Symbolverzeichnisses
+
+% Einstellung Hyperlink
+\hypersetup{colorlinks,citecolor=black,filecolor=black,linkcolor=black,urlcolor=black} % Hyperlink Einstellungen
+
+% Einstellung Algorithmus Package
+\floatname{algorithm}{Algorithmus} % Unterschrift eines Algorithmus ist auf Deutsch
+
+% Header & Footer Einstellungen
+  \pagestyle{fancy} %eigener Seitenstil
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter~ #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thechapter~ #1}}
+
+  \fancyhf{}%alle Kopf- und Fußzeilenfelder bereinigen
+  \renewcommand{\headrulewidth}{0.4pt}%obere Trennlinie
+  \fancyhead[R]{\small{\nouppercase\leftmark}}
+  \renewcommand{\footrulewidth}{0.4pt}%untere Trennlinie
+  \fancyfoot[L]{\small{Lehrstuhl für Luftfahrtsysteme $\quad |\quad$  Technische Universität München}}
+  \fancyfoot[R]{\thepage} %Seitennummer
+
+	\fancypagestyle{plain}{
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{0.4pt}
+  \fancyhead[R]{\small{\nouppercase\leftmark}}
+  \renewcommand{\footrulewidth}{0.4pt}
+  \fancyfoot[L]{\small{Lehrstuhl für Luftfahrtsysteme $\quad |\quad$  Technische Universität München}}
+  \fancyfoot[R]{\thepage}
+}
+
+\edef\restoreparindent{\parindent=\the\parindent\relax}
+\restoreparindent
+
