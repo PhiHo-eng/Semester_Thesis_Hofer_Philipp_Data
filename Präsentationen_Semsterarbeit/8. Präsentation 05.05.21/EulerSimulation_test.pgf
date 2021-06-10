@@ -1,0 +1,35 @@
+% This file was created by tikzplotlib v0.9.8.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+
+\begin{axis}[
+axis lines*=left,
+height=\figureheight,
+legend cell align={left},
+legend style={fill opacity=0.8, draw opacity=1, text opacity=1, draw=none},
+tick align=outside,
+tick pos=left,
+width=\figurewidth,
+x grid style={white!69.0196078431373!black},
+xlabel={Iterations},
+xmin=0, xmax=8,
+xtick style={color=black},
+y grid style={white!69.0196078431373!black},
+ylabel={\(\displaystyle g\)},
+ymin=-1.9, ymax=1.9,
+ytick style={color=black}
+]
+\addplot [semithick, color0]
+table {%
+0 0.149999976158142
+1 0.307500004768372
+3 0.667500019073486
+4 0.845000028610229
+5 0.999000072479248
+6 1
+};
+\addlegendentry{$r(t)$}
+\end{axis}
+
+\end{tikzpicture}
